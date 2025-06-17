@@ -3,16 +3,7 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
   const [error, setError] = useState(null);
-
-  const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +12,7 @@ export default function Contact() {
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({}),
       });
       if (!response.ok) {
         throw new Error("Failed to send message");
@@ -62,52 +53,7 @@ export default function Contact() {
           </div>
         ) : (
           <form className="space-y-6" onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="name" className="block text-gray-200 mb-1">Name</label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-gray-200 mb-1">Email</label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-gray-200 mb-1">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows="4"
-                value={formData.message}
-                onChange={handleChange}
-                className="w-full px-4 py-2 rounded-lg bg-gray-800 text-white border border-cyan-400 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              />
-            </div>
             {error && <p className="text-red-500">{error}</p>}
-            <button
-              type="submit"
-              className="w-full py-3 rounded-lg bg-cyan-500 text-white font-bold text-lg shadow-lg transition-all duration-300
-                ring-2 ring-cyan-400/60 hover:ring-cyan-300/90 hover:bg-cyan-400
-                hover:shadow-[0_0_16px_4px_rgba(34,211,238,0.7)] focus:outline-none focus:ring-4 focus:ring-cyan-300/80
-                animate-pulse hover:animate-none"
-            >
-              Send Message
-            </button>
           </form>
         )}
       </div>
