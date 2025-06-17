@@ -50,7 +50,7 @@ export default function About() {
                     <span className="absolute -left-5 flex items-center justify-center w-8 h-8 bg-cyan-700 rounded-full ring-4 ring-black text-white font-bold">1</span>
                     <h4 className="font-semibold text-cyan-100">Integrated M.Sc. Data Science</h4>
                     <p className="text-cyan-100">Amrita Vishwa Vidyapeetham (2022-2027)</p>
-                    <p className="text-cyan-100">CGPA: 8.06/10</p>
+                    <p className="text-cyan-100">CGPA: 8.27/10</p>
                   </li>
                   <li className="mb-8 ml-6">
                     <span className="absolute -left-5 flex items-center justify-center w-8 h-8 bg-cyan-700 rounded-full ring-4 ring-black text-white font-bold">2</span>
