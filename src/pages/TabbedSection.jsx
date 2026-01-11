@@ -83,12 +83,12 @@ export default function TabbedSection() {
 
   return (
     <div className="w-full">
-      <div className="flex justify-center gap-4 mb-8">
+      <div className="flex justify-start md:justify-center gap-4 mb-8 overflow-x-auto pb-4 px-2 w-full no-scrollbar">
         {tabs.map((tab, idx) => (
           <button
             key={tab}
             onClick={() => setActive(idx)}
-            className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base tracking-wide
+            className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 text-sm md:text-base tracking-wide whitespace-nowrap
               ${active === idx
                 ? "bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white shadow-[0_0_15px_rgba(232,121,249,0.5)] ring-2 ring-fuchsia-400"
                 : "bg-black/50 backdrop-blur-sm text-cyan-200 border border-cyan-800 hover:bg-cyan-900/30 hover:text-fuchsia-300 hover:border-fuchsia-500/50"}

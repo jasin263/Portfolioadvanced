@@ -41,15 +41,15 @@ export default function Home() {
     >
       {/* Glassy neon frame */}
       <div className="absolute inset-0 pointer-events-none z-0">
-        <div className="absolute inset-8 rounded-3xl border-4 border-cyan-400/80 shadow-[0_0_120px_40px_rgba(34,211,238,0.45)]" style={{boxShadow:'0 0 240px 0 #a21cafcc, 0 0 0 8px #000'}}></div>
+        <div className="absolute inset-8 rounded-3xl border-4 border-cyan-400/80 shadow-[0_0_120px_40px_rgba(34,211,238,0.45)]" style={{ boxShadow: '0 0 240px 0 #a21cafcc, 0 0 0 8px #000' }}></div>
       </div>
       <div className="flex justify-center w-full mb-10 z-10">
-        <div className="bg-black/90 backdrop-blur-md rounded-2xl p-10 shadow-2xl border border-cyan-400/60 w-full max-w-2xl flex flex-col items-center">
-          <img src={profileImg} alt="Profile" className="w-36 h-36 rounded-2xl border-4 border-cyan-400 shadow-2xl shadow-fuchsia-400/60 bg-black/90 backdrop-blur mb-6" />
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-2 bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-blue-400 text-transparent bg-clip-text drop-shadow-[0_2px_32px_rgba(168,85,247,0.45)] tracking-tight text-center">
+        <div className="bg-black/90 backdrop-blur-md rounded-2xl p-6 md:p-10 shadow-2xl border border-cyan-400/60 w-full max-w-2xl flex flex-col items-center">
+          <img src={profileImg} alt="Profile" className="w-28 h-28 md:w-36 md:h-36 rounded-2xl border-4 border-cyan-400 shadow-2xl shadow-fuchsia-400/60 bg-black/90 backdrop-blur mb-6" />
+          <h1 className="text-2xl md:text-5xl font-extrabold mb-2 bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-blue-400 text-transparent bg-clip-text drop-shadow-[0_2px_32px_rgba(168,85,247,0.45)] tracking-tight text-center">
             Welcome to my portfolio!
           </h1>
-          <h2 className="text-2xl md:text-3xl font-bold text-white drop-shadow text-center">
+          <h2 className="text-xl md:text-3xl font-bold text-white drop-shadow text-center">
             <Typewriter
               words={["I Am Jasin David"]}
               cursor

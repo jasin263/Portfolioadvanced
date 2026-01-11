@@ -114,12 +114,12 @@ export default function About() {
 
       {/* Tabs */}
       <div className="flex flex-col items-center gap-8">
-        <div className="flex justify-center gap-4 mb-6 flex-wrap">
+        <div className="flex justify-start md:justify-center gap-4 mb-6 flex-wrap md:flex-nowrap overflow-x-auto w-full px-2 pb-2">
           {['Education', 'Project', 'Internships'].map((tab, idx) => (
             <button
               key={tab}
               onClick={() => setTab(idx)}
-              className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 text-base
+              className={`px-6 py-2 rounded-full font-semibold transition-all duration-200 text-base whitespace-nowrap flex-shrink-0
                 ${tabIdx === idx
                   ? "bg-gradient-to-r from-cyan-500 to-fuchsia-600 text-white shadow-lg ring-2 ring-fuchsia-400"
                   : "bg-black text-cyan-200 border border-cyan-700 hover:bg-cyan-900/40 hover:text-fuchsia-300"}
